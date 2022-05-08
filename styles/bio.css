@@ -14,6 +14,7 @@
   src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 body {
+  box-sizing: border-box;
   font-family: "Avenir";
   margin: 0;
 }
@@ -24,9 +25,11 @@ body {
   align-items: center;
   background-color: #323232;
   color: #AFAFAF;
-  height: 100vw;
+  height: 80vw;
 }
 .nav__title {
+  color: #FFF;
+  padding-top: 0.5rem;
   font-size: 1.5em;
   line-height: 2rem;
   font-weight: 500;
@@ -47,29 +50,101 @@ body {
 .nav__clickable {
   width: 100%;
   text-align: center;
-  padding: 0.2rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  padding: 0.625rem;
+  padding-top: 0;
 }
 .nav__clickable--active {
+  color: #FFF;
   justify-self: center;
   border-bottom: 0.2rem solid white;
 }
 
 .hero {
   width: 100%;
+  height: 95%;
   flex-grow: 1;
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.25);
 }
 .hero__band-name {
+  font-size: 2rem;
+  font-weight: 600;
   padding-left: 1rem;
   color: white;
 }
 .hero--background {
-  top: 0;
-  left: 0;
-  opacity: 0.5;
+  background-blend-mode: darken;
+  background-color: rgba(50, 50, 50, 0.5);
   background-image: url("../assets/Images/hero-bio.jpg");
   background-size: cover;
-  background-position: bottom right;
+  background-position: center right;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.about__header--small {
+  font-size: 1.2rem;
+  font-weight: 510;
+}
+.about__header--large {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.about__image {
+  width: 90%;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.about__quote {
+  font-size: 1.1rem;
+  line-height: 2;
+  font-weight: 550;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.about__article {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  line-height: 1.5;
+}
+
+.gallery__header {
+  margin: 1rem 1rem;
+}
+.gallery__image {
+  width: 90%;
+  margin: 1rem 1rem;
+  margin-top: 0;
+}
+
+.footer {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #FAFAFA;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-social__header {
+  margin: 1rem 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.footer-social__icon {
+  margin-right: 1rem;
 }/*# sourceMappingURL=bio.css.map */
