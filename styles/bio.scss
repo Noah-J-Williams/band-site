@@ -50,9 +50,6 @@ a {
     &__title {
         color: $cta-active-text;
         padding-top: 0.5rem;
-        font-size: 1.8em;
-        line-height: 2rem;
-        font-weight: 500;
         margin: 0.5rem;
 
         @include tablet {
@@ -355,6 +352,11 @@ a {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-right: 12%;
+    }
+
+    @include desktop {
+        margin-right: 20%;
     }
 
     &__holder {

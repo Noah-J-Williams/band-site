@@ -9,11 +9,11 @@
 </head>
 <body>
     <header class="nav">
-        <a href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite"></a>
+        <a href="index.html"><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite" class="nav__title"></a>
         <nav class="nav__pages">
             <ul class="nav__click-holder">
-                <li class="nav__clickable nav__clickable--active">Biography</li>
-                <li class="nav__clickable">Shows</li>
+                <a><li class="nav__clickable nav__clickable--active">Biography</li></a>
+                <a href="./pages/shows.html"><li class="nav__clickable">Shows</li></a>
             </ul>
         </nav>
         <section class="hero hero--background">
@@ -75,6 +75,10 @@
             <img class="gallery__image" src="./assets/Images/Photo-gallery-9.jpg" alt="gallery image"/>
         </section>
     </main>
+
+    <section class="comment">
+        <h2 class="comment__header">Join the Conversation</h2>
+    </section>
 
     <footer class="footer">
         <div class="footer-social">

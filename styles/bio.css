@@ -42,9 +42,6 @@ a {
 .nav__title {
   color: #FFF;
   padding-top: 0.5rem;
-  font-size: 1.8em;
-  line-height: 2rem;
-  font-weight: 500;
   margin: 0.5rem;
 }
 @media screen and (min-width: 768px) {
@@ -336,6 +333,12 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-right: 12%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-info {
+    margin-right: 20%;
   }
 }
 @media screen and (min-width: 768px) {
