@@ -1,0 +1,77 @@
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 400;
+    src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/Font/Alternativefiles/AvenirNextLTPro.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 600;
+    src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 700;
+    src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Avenir'; 
+    margin: 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+//nav stuff
+@include nav;
+//footer stuff
+@include footer;
+.hero {
+    width: 100%;
+    height: 95%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @include tablet {
+        height: 95%;
+    }
+
+    &__band-name {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-left: 1rem;
+        color: white;
+
+        @include tablet {
+            font-size: 3.75rem;
+            padding-left: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 6rem;
+        }
+    }
+    &--background {
+        top: 0;
+        left: 0;
+        background-blend-mode: darken;
+        background-color: rgba(50, 50, 50, 0.5);
+        background-image:url("../assets/Images/hero-shows.jpg");
+        background-size:cover;
+        background-position: center right;
+    }
+}
+
+

@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Avenir";
+  font-weight: 400;
+  src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/Font/Alternativefiles/AvenirNextLTPro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir";
+  font-weight: 600;
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avenir";
+  font-weight: 700;
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+body {
+  box-sizing: border-box;
+  font-family: "Avenir";
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+  color: #AFAFAF;
+  height: 80vw;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 70vw;
+  }
+}
+.nav__title {
+  color: #FFF;
+  padding-top: 0.5rem;
+  margin: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__title {
+    margin: 1rem 3rem;
+    margin-right: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__title {
+    margin: 1rem 6rem;
+    margin-right: 4rem;
+  }
+}
+.nav__pages {
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .nav__pages {
+    width: 20%;
+    align-self: flex-end;
+  }
+}
+.nav__click-holder {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style-type: none;
+}
+.nav__clickable {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 0.625rem;
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .nav__clickable {
+    padding-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+.nav__clickable--active {
+  color: #FFF;
+  justify-self: center;
+  font-weight: 700;
+  border-bottom: 0.35rem solid white;
+}
+
+.footer {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem;
+  }
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    flex-direction: row;
+  }
+}
+.footer-social__header {
+  margin: 1rem 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-social__header {
+    width: 18rem;
+    font-size: 2.6rem;
+  }
+}
+.footer-social__icon {
+  height: 2rem;
+  margin-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-social__icon {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 12%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-info {
+    margin-right: 20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-info__holder {
+    align-content: space-between;
+    width: 28%;
+    margin: 1rem;
+  }
+}
+.footer-info__text {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-info__text {
+    font-size: 0.8rem;
+  }
+}
+.footer-info__text--bold {
+  font-weight: 700;
+}
+.footer-info__contact {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.footer-copyright {
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+
+.footer-title {
+  margin-top: 4rem;
+  width: 8.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-title {
+    position: absolute;
+    left: 75%;
+    margin-top: 2rem;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 95%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 95%;
+  }
+}
+.hero__band-name {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .hero__band-name {
+    font-size: 3.75rem;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__band-name {
+    padding-left: 6rem;
+  }
+}
+.hero--background {
+  top: 0;
+  left: 0;
+  background-blend-mode: darken;
+  background-color: rgba(50, 50, 50, 0.5);
+  background-image: url("../assets/Images/hero-shows.jpg");
+  background-size: cover;
+  background-position: center right;
+}/*# sourceMappingURL=shows.css.map */

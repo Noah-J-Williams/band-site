@@ -5,21 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shows</title>
-    <link rel="stylesheet" href="../styles/shows.scss"/>
+    <link rel="stylesheet" href="../styles/shows.css"/>
 </head>
 <body>
     <header class="nav">
-        <a href="../index.html"><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite" class="nav__title"></a>
+        <a href="index.html"><img src="../assets/Logo/Logo-bandsite.svg" alt="bandsite" class="nav__title"></a>
         <nav class="nav__pages">
             <ul class="nav__click-holder">
-                <li class="nav__clickable nav__clickable--active">Biography</li>
-                <li class="nav__clickable">Shows</li>
+                <li class="nav__clickable"><a href="../index.html">Biography</a></li>
+                <li class="nav__clickable nav__clickable--active"><a href="./shows.html">Shows</a></li>
             </ul>
         </nav>
         <section class="hero hero--background">
-            <h2 class="hero__band-name">The Bees Knees</h2>
+            <h2 class="hero__album-name">Beautiful Beasts Album</h2>
+            <h1 class="hero__son-name">Queen of Yellow x For The Stings</h1>
+            <iframe width="90%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1214533915&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/pavelisp" title="Freak - BaClan?" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
         </section>
     </header>
     
+    <main class="shows">
+        <h2 class="shows__header">Shows</h2>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-social">
+            <h4 class="footer-social__header">Get in Touch</h4>
+            <a href="https://www.instagram.com"><img class="footer-social__icon" src="../assets/Icons/SVG/Icon-instagram.svg" alt="instagram"/></a>
+            <a href="https://www.facebook.com"><img class="footer-social__icon" src="../assets/Icons/SVG/Icon-facebook.svg" alt="facebook"/></a>
+            <a href="https://www.twitter.com"><img class="footer-social__icon" src="../assets/Icons/SVG/Icon-twitter.svg" alt="twitter"/></a>
+        </div>
+        <div class="footer-info">
+            <div class="footer-info__holder">
+            <p class="footer-info__text footer-info__text--bold">Cam Adams<br>The Bees Knees Management</p>
+            <p class="footer-info__text">503 Broadway Penthouse,<br>New York, NY 10012, USA</p>
+            <p class="footer-info__contact">info@thebeesknees.com</p>
+            </div>
+            <div class="footer-info__holder">
+            <p class="footer-info__text footer-info__text--bold">Pearl Gregg<br>Limitless Artist Group</p>
+            <p class="footer-info__text">Booking Agent for<br>USA / South America / Japan</p>
+            <p class="footer-info__contact">pearl.gregg@limitlessag.com</p>
+            </div>
+            <div class="footer-info__holder">
+            <p class="footer-info__text footer-info__text--bold">Carson Whyte<br>ARCH Entertainment</p>
+            <p class="footer-info__text">Booking Agent for<br>UK / EU / AU</p>
+            <p class="footer-info__contact">cwhyte@archentertainment.com</p>
+            </div>
+        </div>
+        <img class="footer-title" src="../assets/Logo/Logo-bandsite.svg" alt="bandsite"/>
+        <div class="footer-copyright"><p class="footer-copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p></div>
+        
+    </footer>
 </body>
 </html>

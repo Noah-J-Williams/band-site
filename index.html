@@ -12,12 +12,12 @@
         <a href="index.html"><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite" class="nav__title"></a>
         <nav class="nav__pages">
             <ul class="nav__click-holder">
-                <a><li class="nav__clickable nav__clickable--active">Biography</li></a>
-                <a href="./pages/shows.html"><li class="nav__clickable">Shows</li></a>
+                <li class="nav__clickable nav__clickable--active"><a href="index.html">Biography</a></li>
+                <li class="nav__clickable"><a href="./pages/shows.html">Shows</a></li>
             </ul>
         </nav>
         <section class="hero hero--background">
-            <h2 class="hero__band-name">The Bees Knees</h2>
+            <h1 class="hero__band-name">The Bees Knees</h2>
         </section>
     </header>
 
@@ -78,6 +78,16 @@
 
     <section class="comment">
         <h2 class="comment__header">Join the Conversation</h2>
+        <form class="comment-form">
+            <img class="comment__avatar" src="./assets/Images/Mohan-muruge.jpg" alt="avatar"/>
+            <div class="comment-form__holder">
+                <label class="comment-form__label">NAME</label>
+                <input class="comment-form__text-area" type="text" name="name" placeholder="Enter your name"/>
+                <labelk class="comment-form__label">COMMENT</labelk>
+                <input class="comment-form__comment-area" type="textarea" name="comment" placeholder="Add a new comment"/>
+                <button class="comment-form__button" action="submit">COMMENT</button>
+            </div>
+        </form>
     </section>
 
     <footer class="footer">
@@ -109,5 +119,6 @@
         
     </footer>
     
+    <script src="./scripts/index-page.js"></script>
 </body>
 </html>
