@@ -24,6 +24,11 @@ a {
   color: white;
 }
 
+iframe {
+  padding-left: 1rem;
+  width: 90%;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -97,6 +102,10 @@ a {
   justify-self: center;
   font-weight: 700;
   border-bottom: 0.35rem solid white;
+}
+
+.nav {
+  height: 150vw;
 }
 
 .footer {
@@ -208,11 +217,17 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .hero {
     height: 95%;
   }
+}
+.hero__album-name {
+  color: #AFAFAF;
+  font-size: 1rem;
+  padding-left: 1rem;
 }
 .hero__band-name {
   font-size: 2rem;
@@ -239,4 +254,49 @@ a {
   background-image: url("../assets/Images/hero-shows.jpg");
   background-size: cover;
   background-position: center right;
+}
+
+.shows {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.shows__header {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.shows-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 2px solid #E1E1E1;
+}
+.shows-holder__info {
+  font-size: 0.5rem;
+  color: #AFAFAF;
+}
+.shows-holder__date {
+  font-size: 1rem;
+  margin: 0;
+}
+.shows-holder__text {
+  margin: 0;
+}
+.shows-holder__button {
+  align-self: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0;
+  height: 40px;
+  background-color: #323232;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+}
+.shows-holder__button:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=shows.css.map */

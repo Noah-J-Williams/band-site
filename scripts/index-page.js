@@ -25,31 +25,32 @@ let comments = [
 //hardcoding default comments using DOM
 let container = document.querySelector(".comment");
 for(let i = 0; i < comments.length; i++){
-    //adding the avatar
-    let avatar = document.createElement("img");
-    avatar.setAttribute("class", "comment__avatar");
-    container.appendChild(avatar);
-
     //adding the div which will make styling with flex easier
-    container.appendChild(document.createElement("div"));
+    let div = document.createElement("div");
+    div.setAttribute("class", "comment__holder")
+    container.appendChild(div);
 
+    //adding avatar
+    let avatar = document.createElement("img");
+    avatar.setAttribute("class", "comment__avatar-loaded");
+    div.appendChild(avatar);
     //adding the name of the person who commented
     let name = document.createElement("h3");
     name.setAttribute("class", "comment__name");
     name.innerHTML = comments[i].name;
-    container.appendChild(name);
+    div.appendChild(name);
 
     //adding the date the comment was made
     let date = document.createElement("h4");
     date.setAttribute("class", "comment__date");
     date.innerHTML = comments[i].date;
-    container.appendChild(date);
+    div.appendChild(date);
 
     //adding the content of the comment
     let text = document.createElement("p");
     text.setAttribute("class", "comment__text");
     text.innerHTML = comments[i].comment;
-    container.appendChild(text);
+    div.appendChild(text);
 
 
 }
