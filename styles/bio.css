@@ -323,11 +323,12 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   border-bottom: 1px solid #E1E1E1;
+  margin-left: 1rem;
 }
 .comment__name {
-  margin-right: 8%;
+  margin-right: 10vw;
   font-size: 1rem;
 }
 .comment__text {
