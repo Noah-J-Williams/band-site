@@ -1,56 +1,74 @@
 //Default comments to be loaded
-let comments = [
-    {
-        name: "Connor Walton",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains",
-        date: "02/17/2021"
-        
-    }, 
-    {
-        name: "Emilie Beach",
-        comment: "I feel blessed to have seeen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        date: "01/09/2021"
-        
-    },
-    {
-        name: "Miles Acosta",
-        comment: "I can't stop listening. Every time i hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-        date: "12/20/2020"
-        
-    }
-];
+let key = "0c38eeb1-7333-4431-96e6-05e3c792fb4d";
 
-
+function getComments(){
+    axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${key}`)
+    .then(result => {
+        let comments = [];
+        for(let i = 0; i < result.data.length; i++){
+            comments[i] = result.data[i];
+        }
+        loadComments(comments);
+    })
+    .catch(result => console.log(result));
+}
 
 //hardcoding default comments using DOM
-let container = document.querySelector(".comment");
-for(let i = 0; i < comments.length; i++){
-    //adding the div which will make styling with flex easier
-    let div = document.createElement("div");
-    div.setAttribute("class", "comment__holder")
-    container.appendChild(div);
-
-    //adding avatar
-    let avatar = document.createElement("img");
-    avatar.setAttribute("class", "comment__avatar-loaded");
-    div.appendChild(avatar);
-    //adding the name of the person who commented
-    let name = document.createElement("h3");
-    name.setAttribute("class", "comment__name");
-    name.innerHTML = comments[i].name;
-    div.appendChild(name);
-
-    //adding the date the comment was made
-    let date = document.createElement("h4");
-    date.setAttribute("class", "comment__date");
-    date.innerHTML = comments[i].date;
-    div.appendChild(date);
-
-    //adding the content of the comment
-    let text = document.createElement("p");
-    text.setAttribute("class", "comment__text");
-    text.innerHTML = comments[i].comment;
-    div.appendChild(text);
-
-
+function loadComments(comments){
+    let container = document.querySelector(".target");
+    for(let i = 0; i < comments.length; i++){
+        //adding the div which will make styling with flex easier
+        let div = document.createElement("div");
+        div.setAttribute("class", "comment__holder")
+        container.appendChild(div);
+    
+        //adding avatar
+        let avatar = document.createElement("img");
+        avatar.setAttribute("class", "comment__avatar-loaded");
+        div.appendChild(avatar);
+        //adding the name of the person who commented
+        let name = document.createElement("h4");
+        name.setAttribute("class", "comment__name");
+        name.innerHTML = comments[i].name;
+        div.appendChild(name);
+    
+        //adding the date the comment was made
+        let date = document.createElement("h4");
+        date.setAttribute("class", "comment__date");
+        let unString = Number(comments[i].timestamp);
+        date.innerHTML = new Date(unString);
+        div.appendChild(date);
+    
+        //adding the content of the comment
+        let text = document.createElement("p");
+        text.setAttribute("class", "comment__text");
+        text.innerHTML = comments[i].comment;
+        div.appendChild(text);
+    }
 }
+
+//function reloadComments which 
+function reloadComments() {
+    let target = document.querySelector(".target");
+    target.innerHTML = "";
+    loadComments();
+}
+
+getComments();
+
+let submit = document.querySelector("#commentForm");
+submit.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let d = new Date();
+
+    //OUCH LINEAR TIME
+    comments.unshift({
+        name: event.target.name.value,
+        comment: event.target.comment.value,
+        date: (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear()
+    });
+    submit.reset();
+
+    reloadComments();
+});
+

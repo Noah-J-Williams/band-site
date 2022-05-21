@@ -26,6 +26,7 @@ a {
 
 iframe {
   padding-left: 1rem;
+  padding-bottom: 1rem;
   width: 90%;
 }
 
@@ -105,7 +106,9 @@ iframe {
 }
 
 .nav {
-  height: 150vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .footer {
@@ -217,7 +220,7 @@ iframe {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -225,11 +228,13 @@ iframe {
   }
 }
 .hero__album-name {
+  margin-top: 2rem;
   color: #AFAFAF;
   font-size: 1rem;
   padding-left: 1rem;
 }
 .hero__band-name {
+  margin-top: 0;
   font-size: 2rem;
   font-weight: 600;
   padding-left: 1rem;
@@ -264,6 +269,22 @@ iframe {
   font-size: 2rem;
   margin-left: 1rem;
 }
+.shows__columns {
+  display: flex;
+  flex-direction: row;
+}
+.shows__info {
+  display: none;
+  font-size: 1rem;
+  color: #AFAFAF;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+@media screen and (min-width: 768px) {
+  .shows__info {
+    display: initial;
+  }
+}
 
 .shows-holder {
   display: flex;
@@ -274,9 +295,27 @@ iframe {
   padding-right: 1rem;
   border-bottom: 2px solid #E1E1E1;
 }
+.shows-holder:hover {
+  background-color: #FAFAFA;
+}
+.shows-holder:active {
+  background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows-holder {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .shows-holder__info {
   font-size: 0.5rem;
   color: #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .shows-holder__info {
+    display: none;
+  }
 }
 .shows-holder__date {
   font-size: 1rem;
@@ -299,4 +338,10 @@ iframe {
 }
 .shows-holder__button:hover {
   background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .shows-holder__button {
+    align-self: unset;
+    width: 10rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

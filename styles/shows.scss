@@ -34,13 +34,14 @@ a {
 
 iframe {
     padding-left: 1rem;
+    padding-bottom: 1rem;
     width: 90%;
 }
 //nav stuff
 @include nav;
 
 .nav {
-    height: 150vw;
+    height: fit-content;
 }
 //footer stuff
 @include footer;
@@ -52,18 +53,20 @@ iframe {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 
     @include tablet {
         height: 95%;
     }
 
     &__album-name {
+        margin-top: 2rem;
         color: $secondary-text;
         font-size: 1rem;
         padding-left: 1rem;
     }
     &__band-name {
+        margin-top: 0;
         font-size: 2rem;
         font-weight: 600;
         padding-left: 1rem;
@@ -96,6 +99,23 @@ iframe {
         font-size: 2rem;
         margin-left: 1rem;
     }
+
+    &__columns{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__info {
+        display: none;
+        font-size: 1rem;
+        color: $secondary-text;
+        margin-left: 8%;
+        margin-right: 8%;
+        
+        @include tablet {
+            display: initial;
+        }
+    }
 }
 
 .shows-holder {
@@ -107,9 +127,27 @@ iframe {
     padding-right: 1rem;
     border-bottom: 2px solid $divider;
 
+    &:hover {
+        background-color: #FAFAFA;
+    }
+
+    &:active {
+        background-color: #E1E1E1;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__info {
         font-size: 0.5rem;
         color: $secondary-text;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__date {
@@ -135,6 +173,11 @@ iframe {
 
         &:hover {
             background-color: #000000;
+        }
+
+        @include tablet {
+            align-self: unset;
+            width: 10rem;
         }
     }
 }

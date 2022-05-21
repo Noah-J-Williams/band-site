@@ -78,16 +78,19 @@
 
     <section class="comment">
         <h2 class="comment__header">Join the Conversation</h2>
-        <form class="comment-form">
+        <form class="comment-form" id="commentForm">
             <img class="comment__avatar" src="./assets/Images/Mohan-muruge.jpg" alt="avatar"/>
             <div class="comment-form__holder">
                 <label class="comment-form__label">NAME</label>
-                <input class="comment-form__text-area" type="text" name="name" placeholder="Enter your name"/>
-                <labelk class="comment-form__label">COMMENT</labelk>
-                <input class="comment-form__comment-area" type="textarea" name="comment" placeholder="Add a new comment"/>
+                <input class="comment-form__name-area" type="text" name="name" placeholder="Enter your name" required="required"/>
+                <label class="comment-form__label">COMMENT</labelk>
+                <textarea class="comment-form__comment-area" type="textarea" name="comment" placeholder="Add a new comment" required="required"></textarea>
                 <button class="comment-form__button" action="submit">COMMENT</button>
             </div>
         </form>
+        <div class="target">
+            <!--This is a target for DOM with comments-->
+        </div>
     </section>
 
     <footer class="footer">
@@ -118,7 +121,8 @@
         <div class="footer-copyright"><p class="footer-copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p></div>
         
     </footer>
-    
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/index-page.js"></script>
 </body>
 </html>
