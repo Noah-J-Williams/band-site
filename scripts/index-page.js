@@ -8,6 +8,9 @@ function getComments(){
         for(let i = 0; i < result.data.length; i++){
             comments[i] = result.data[i];
         }
+        comments.sort((a, b) => {
+            return b.timestamp - a.timestamp;
+        })
         loadComments(comments);
     })
     .catch(result => console.log(result));
@@ -51,7 +54,7 @@ function loadComments(comments){
 function reloadComments() {
     let target = document.querySelector(".target");
     target.innerHTML = "";
-    loadComments();
+    getComments();
 }
 
 getComments();
@@ -59,16 +62,12 @@ getComments();
 let submit = document.querySelector("#commentForm");
 submit.addEventListener("submit", (event) => {
     event.preventDefault();
-    let d = new Date();
-
-    //OUCH LINEAR TIME
-    comments.unshift({
+    axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${key}`, {
         name: event.target.name.value,
-        comment: event.target.comment.value,
-        date: (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear()
-    });
+        comment: event.target.comment.value
+    })
+    .then(result => console.log(result))
+    .catch(result => console.log(result));
     submit.reset();
-
     reloadComments();
 });
-
