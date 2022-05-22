@@ -66,8 +66,8 @@ submit.addEventListener("submit", (event) => {
         name: event.target.name.value,
         comment: event.target.comment.value
     })
-    .then(result => console.log(result))
+    .then(result => reloadComments())
     .catch(result => console.log(result));
     submit.reset();
-    reloadComments();
+    
 });
